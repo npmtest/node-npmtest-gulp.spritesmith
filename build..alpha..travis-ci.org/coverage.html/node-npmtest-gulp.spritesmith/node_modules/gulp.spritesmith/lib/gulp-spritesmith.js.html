@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp.spritesmith/gulp.spritesmith/lib/gulp-spritesmith.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp.spritesmith/node_modules/gulp.spritesmith/lib/gulp-spritesmith.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp.spritesmith">npmtest-gulp.spritesmith (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp.spritesmith/gulp.spritesmith/lib/gulp-spritesmith.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp.spritesmith/node_modules/gulp.spritesmith/lib/gulp-spritesmith.js</span></h1>
     <h2>
         
         Statements: <span class="metric">15.74% <small>(31 / 197)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp.spritesmith/gulp.spritesmith/lib/</a> » gulp-spritesmith.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp.spritesmith/node_modules/gulp.spritesmith/lib/</a> &#187; gulp-spritesmith.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -1058,15 +1060,15 @@ ExtFormat.prototype = {
   add: function (name, val) {
     this.formatObj[name] = val;
   },
-  get: <span class="fstat-no" title="function not covered">function (filepath) {</span>
+  get: <span class="fstat-no" title="function not covered" >function (filepath) {</span>
     // Grab the extension from the filepath
-<span class="cstat-no" title="statement not covered">    var ext = path.extname(filepath);</span>
-<span class="cstat-no" title="statement not covered">    var lowerExt = ext.toLowerCase();</span>
+<span class="cstat-no" title="statement not covered" >    var ext = path.extname(filepath);</span>
+<span class="cstat-no" title="statement not covered" >    var lowerExt = ext.toLowerCase();</span>
 &nbsp;
     // Look up the file extenion from our format object
-<span class="cstat-no" title="statement not covered">    var formatObj = this.formatObj;</span>
-<span class="cstat-no" title="statement not covered">    var format = formatObj[lowerExt];</span>
-<span class="cstat-no" title="statement not covered">    return format;</span>
+<span class="cstat-no" title="statement not covered" >    var formatObj = this.formatObj;</span>
+<span class="cstat-no" title="statement not covered" >    var format = formatObj[lowerExt];</span>
+<span class="cstat-no" title="statement not covered" >    return format;</span>
   }
 };
 &nbsp;
@@ -1090,112 +1092,112 @@ cssFormats.add('.css', 'css');
 &nbsp;
 // Copy/paste helper from gulp
 // https://github.com/wearefractal/glob-stream/blob/v5.0.0/index.js#L131-L138
-<span class="fstat-no" title="function not covered">function unrelative(cwd, glob) {</span>
-<span class="cstat-no" title="statement not covered">  var mod = '';</span>
-<span class="cstat-no" title="statement not covered">  if (glob[0] === '!') {</span>
-<span class="cstat-no" title="statement not covered">    mod = glob[0];</span>
-<span class="cstat-no" title="statement not covered">    glob = glob.slice(1);</span>
+<span class="fstat-no" title="function not covered" >function unrelative(cwd, glob) {</span>
+<span class="cstat-no" title="statement not covered" >  var mod = '';</span>
+<span class="cstat-no" title="statement not covered" >  if (glob[0] === '!') {</span>
+<span class="cstat-no" title="statement not covered" >    mod = glob[0];</span>
+<span class="cstat-no" title="statement not covered" >    glob = glob.slice(1);</span>
   }
-<span class="cstat-no" title="statement not covered">  return mod + path.resolve(cwd, glob);</span>
+<span class="cstat-no" title="statement not covered" >  return mod + path.resolve(cwd, glob);</span>
 }
 &nbsp;
 // Define helper for coordinate naming
-<span class="fstat-no" title="function not covered">function getCoordinateName(filepath) {</span>
+<span class="fstat-no" title="function not covered" >function getCoordinateName(filepath) {</span>
   // Extract the image name (exlcuding extension)
-<span class="cstat-no" title="statement not covered">  var fullname = path.basename(filepath);</span>
-<span class="cstat-no" title="statement not covered">  var nameParts = fullname.split('.');</span>
+<span class="cstat-no" title="statement not covered" >  var fullname = path.basename(filepath);</span>
+<span class="cstat-no" title="statement not covered" >  var nameParts = fullname.split('.');</span>
 &nbsp;
   // If there is are more than 2 parts, pop the last one
-<span class="cstat-no" title="statement not covered">  if (nameParts.length &gt;= 2) {</span>
-<span class="cstat-no" title="statement not covered">    nameParts.pop();</span>
+<span class="cstat-no" title="statement not covered" >  if (nameParts.length &gt;= 2) {</span>
+<span class="cstat-no" title="statement not covered" >    nameParts.pop();</span>
   }
 &nbsp;
   // Return our modified filename
-<span class="cstat-no" title="statement not covered">  return nameParts.join('.');</span>
+<span class="cstat-no" title="statement not covered" >  return nameParts.join('.');</span>
 }
 &nbsp;
 // Create a gulp-spritesmith function
-<span class="fstat-no" title="function not covered">function gulpSpritesmith(params) {</span>
-<span class="cstat-no" title="statement not covered">  var imgName = params.imgName;</span>
-<span class="cstat-no" title="statement not covered">  var cssName = params.cssName;</span>
-<span class="cstat-no" title="statement not covered">  assert(imgName, 'An `imgName` parameter was not provided to `gulp.spritesmith` (required)');</span>
-<span class="cstat-no" title="statement not covered">  assert(cssName, 'A `cssName` parameter was not provided to `gulp.spritesmith` (required)');</span>
+<span class="fstat-no" title="function not covered" >function gulpSpritesmith(params) {</span>
+<span class="cstat-no" title="statement not covered" >  var imgName = params.imgName;</span>
+<span class="cstat-no" title="statement not covered" >  var cssName = params.cssName;</span>
+<span class="cstat-no" title="statement not covered" >  assert(imgName, 'An `imgName` parameter was not provided to `gulp.spritesmith` (required)');</span>
+<span class="cstat-no" title="statement not covered" >  assert(cssName, 'A `cssName` parameter was not provided to `gulp.spritesmith` (required)');</span>
 &nbsp;
   // If there are settings for retina, verify our all of them are present
-<span class="cstat-no" title="statement not covered">  var retinaSrcFilter = params.retinaSrcFilter;</span>
-<span class="cstat-no" title="statement not covered">  var retinaImgName = params.retinaImgName;</span>
-<span class="cstat-no" title="statement not covered">  if (retinaSrcFilter || retinaImgName) {</span>
-<span class="cstat-no" title="statement not covered">    assert(retinaSrcFilter &amp;&amp; retinaImgName, 'Retina settings detected. We must have both `retinaSrcFilter` and ' +</span>
+<span class="cstat-no" title="statement not covered" >  var retinaSrcFilter = params.retinaSrcFilter;</span>
+<span class="cstat-no" title="statement not covered" >  var retinaImgName = params.retinaImgName;</span>
+<span class="cstat-no" title="statement not covered" >  if (retinaSrcFilter || retinaImgName) {</span>
+<span class="cstat-no" title="statement not covered" >    assert(retinaSrcFilter &amp;&amp; retinaImgName, 'Retina settings detected. We must have both `retinaSrcFilter` and ' +</span>
       '`retinaImgName` provided for retina to work');
   }
 &nbsp;
   // Define our output streams
-<span class="cstat-no" title="statement not covered">  var imgStream = through2.obj();</span>
-<span class="cstat-no" title="statement not covered">  var cssStream = through2.obj();</span>
+<span class="cstat-no" title="statement not covered" >  var imgStream = through2.obj();</span>
+<span class="cstat-no" title="statement not covered" >  var cssStream = through2.obj();</span>
 &nbsp;
   // Create a stream to take in images
-<span class="cstat-no" title="statement not covered">  var images = [];</span>
-<span class="cstat-no" title="statement not covered">  var onData = <span class="fstat-no" title="function not covered">function (file, encoding, cb) {</span></span>
-<span class="cstat-no" title="statement not covered">    images.push(file);</span>
-<span class="cstat-no" title="statement not covered">    cb();</span>
+<span class="cstat-no" title="statement not covered" >  var images = [];</span>
+<span class="cstat-no" title="statement not covered" >  var onData = <span class="fstat-no" title="function not covered" >function (file, encoding, cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >    images.push(file);</span>
+<span class="cstat-no" title="statement not covered" >    cb();</span>
   };
 &nbsp;
   // When we have completed our input
-<span class="cstat-no" title="statement not covered">  var onEnd = <span class="fstat-no" title="function not covered">function (cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >  var onEnd = <span class="fstat-no" title="function not covered" >function (cb) {</span></span>
     // If there are no images present, exit early
     // DEV: This is against the behavior of `spritesmith` but pro-gulp
     // DEV: See https://github.com/twolfson/gulp.spritesmith/issues/17
-<span class="cstat-no" title="statement not covered">    if (images.length === 0) {</span>
-<span class="cstat-no" title="statement not covered">      imgStream.push(null);</span>
-<span class="cstat-no" title="statement not covered">      cssStream.push(null);</span>
-<span class="cstat-no" title="statement not covered">      return cb();</span>
+<span class="cstat-no" title="statement not covered" >    if (images.length === 0) {</span>
+<span class="cstat-no" title="statement not covered" >      imgStream.push(null);</span>
+<span class="cstat-no" title="statement not covered" >      cssStream.push(null);</span>
+<span class="cstat-no" title="statement not covered" >      return cb();</span>
     }
 &nbsp;
     // Determine the format of the image
-<span class="cstat-no" title="statement not covered">    var imgOpts = params.imgOpts || {};</span>
-<span class="cstat-no" title="statement not covered">    var imgFormat = imgOpts.format || imgFormats.get(imgName) || 'png';</span>
+<span class="cstat-no" title="statement not covered" >    var imgOpts = params.imgOpts || {};</span>
+<span class="cstat-no" title="statement not covered" >    var imgFormat = imgOpts.format || imgFormats.get(imgName) || 'png';</span>
 &nbsp;
     // Set up the defautls for imgOpts
-<span class="cstat-no" title="statement not covered">    imgOpts = _.defaults({}, imgOpts, {format: imgFormat});</span>
+<span class="cstat-no" title="statement not covered" >    imgOpts = _.defaults({}, imgOpts, {format: imgFormat});</span>
 &nbsp;
     // If we have retina settings, filter out the retina images
-<span class="cstat-no" title="statement not covered">    var retinaImages;</span>
-<span class="cstat-no" title="statement not covered">    if (retinaSrcFilter) {</span>
+<span class="cstat-no" title="statement not covered" >    var retinaImages;</span>
+<span class="cstat-no" title="statement not covered" >    if (retinaSrcFilter) {</span>
       // Filter out our retina files
       // https://github.com/wearefractal/glob-stream/blob/v5.0.0/index.js#L84-L87
-<span class="cstat-no" title="statement not covered">      retinaImages = [];</span>
-<span class="cstat-no" title="statement not covered">      var retinaSrcPatterns = Array.isArray(retinaSrcFilter) ? retinaSrcFilter : [retinaSrcFilter];</span>
-<span class="cstat-no" title="statement not covered">      images = images.filter(<span class="fstat-no" title="function not covered">function filterSrcFile (file) {</span></span>
+<span class="cstat-no" title="statement not covered" >      retinaImages = [];</span>
+<span class="cstat-no" title="statement not covered" >      var retinaSrcPatterns = Array.isArray(retinaSrcFilter) ? retinaSrcFilter : [retinaSrcFilter];</span>
+<span class="cstat-no" title="statement not covered" >      images = images.filter(<span class="fstat-no" title="function not covered" >function filterSrcFile (file) {</span></span>
         // If we have a retina file, filter it out
-<span class="cstat-no" title="statement not covered">        var matched = retinaSrcPatterns.some(<span class="fstat-no" title="function not covered">function matchMinimatches (retinaSrcPattern) {</span></span>
-<span class="cstat-no" title="statement not covered">          var minimatch = new Minimatch(unrelative(file.cwd, retinaSrcPattern));</span>
-<span class="cstat-no" title="statement not covered">          return minimatch.match(file.path);</span>
+<span class="cstat-no" title="statement not covered" >        var matched = retinaSrcPatterns.some(<span class="fstat-no" title="function not covered" >function matchMinimatches (retinaSrcPattern) {</span></span>
+<span class="cstat-no" title="statement not covered" >          var minimatch = new Minimatch(unrelative(file.cwd, retinaSrcPattern));</span>
+<span class="cstat-no" title="statement not covered" >          return minimatch.match(file.path);</span>
         });
-<span class="cstat-no" title="statement not covered">        if (matched) {</span>
-<span class="cstat-no" title="statement not covered">          retinaImages.push(file);</span>
-<span class="cstat-no" title="statement not covered">          return false;</span>
+<span class="cstat-no" title="statement not covered" >        if (matched) {</span>
+<span class="cstat-no" title="statement not covered" >          retinaImages.push(file);</span>
+<span class="cstat-no" title="statement not covered" >          return false;</span>
         // Otherwise, keep it in the src files
         } else {
-<span class="cstat-no" title="statement not covered">          return true;</span>
+<span class="cstat-no" title="statement not covered" >          return true;</span>
         }
       });
 &nbsp;
       // If we have a different amount of normal and retina images, complain and leave
-<span class="cstat-no" title="statement not covered">      if (images.length !== retinaImages.length) {</span>
-<span class="cstat-no" title="statement not covered">        var err = new Error('Retina settings detected but ' + retinaImages.length + ' retina images were found. ' +</span>
+<span class="cstat-no" title="statement not covered" >      if (images.length !== retinaImages.length) {</span>
+<span class="cstat-no" title="statement not covered" >        var err = new Error('Retina settings detected but ' + retinaImages.length + ' retina images were found. ' +</span>
           'We have ' + images.length + ' normal images and expect these numbers to line up. ' +
           'Please double check `retinaSrcFilter`.');
-<span class="cstat-no" title="statement not covered">        err.images = images;</span>
-<span class="cstat-no" title="statement not covered">        err.retinaImages = retinaImages;</span>
-<span class="cstat-no" title="statement not covered">        this.emit('error', err);</span>
-<span class="cstat-no" title="statement not covered">        imgStream.push(null);</span>
-<span class="cstat-no" title="statement not covered">        cssStream.push(null);</span>
-<span class="cstat-no" title="statement not covered">        return cb();</span>
+<span class="cstat-no" title="statement not covered" >        err.images = images;</span>
+<span class="cstat-no" title="statement not covered" >        err.retinaImages = retinaImages;</span>
+<span class="cstat-no" title="statement not covered" >        this.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >        imgStream.push(null);</span>
+<span class="cstat-no" title="statement not covered" >        cssStream.push(null);</span>
+<span class="cstat-no" title="statement not covered" >        return cb();</span>
       }
     }
 &nbsp;
     // Prepare spritesmith parameters
-<span class="cstat-no" title="statement not covered">    var spritesmithParams = {</span>
+<span class="cstat-no" title="statement not covered" >    var spritesmithParams = {</span>
       engine: params.engine,
       algorithm: params.algorithm,
       padding: params.padding || 0,
@@ -1203,144 +1205,144 @@ cssFormats.add('.css', 'css');
       engineOpts: params.engineOpts || {},
       exportOpts: imgOpts
     };
-<span class="cstat-no" title="statement not covered">    var that = this;</span>
+<span class="cstat-no" title="statement not covered" >    var that = this;</span>
 &nbsp;
     // Construct our spritesmiths
-<span class="cstat-no" title="statement not covered">    var spritesmith = new Spritesmith(spritesmithParams);</span>
-<span class="cstat-no" title="statement not covered">    var retinaSpritesmithParams;</span>
-<span class="cstat-no" title="statement not covered">    var retinaSpritesmith;</span>
-<span class="cstat-no" title="statement not covered">    if (retinaImages) {</span>
-<span class="cstat-no" title="statement not covered">      retinaSpritesmithParams = _.defaults({</span>
+<span class="cstat-no" title="statement not covered" >    var spritesmith = new Spritesmith(spritesmithParams);</span>
+<span class="cstat-no" title="statement not covered" >    var retinaSpritesmithParams;</span>
+<span class="cstat-no" title="statement not covered" >    var retinaSpritesmith;</span>
+<span class="cstat-no" title="statement not covered" >    if (retinaImages) {</span>
+<span class="cstat-no" title="statement not covered" >      retinaSpritesmithParams = _.defaults({</span>
         padding: spritesmithParams.padding * 2
       }, spritesmithParams);
-<span class="cstat-no" title="statement not covered">      retinaSpritesmith = new Spritesmith(retinaSpritesmithParams);</span>
+<span class="cstat-no" title="statement not covered" >      retinaSpritesmith = new Spritesmith(retinaSpritesmithParams);</span>
     }
 &nbsp;
     // In parallel
-<span class="cstat-no" title="statement not covered">    async.parallel([</span>
+<span class="cstat-no" title="statement not covered" >    async.parallel([</span>
       // Load in our normal images
-<span class="fstat-no" title="function not covered">      function generateNormalImages (callback) {</span>
-<span class="cstat-no" title="statement not covered">        spritesmith.createImages(images, callback);</span>
+<span class="fstat-no" title="function not covered" >      function generateNormalImages (callback) {</span>
+<span class="cstat-no" title="statement not covered" >        spritesmith.createImages(images, callback);</span>
       },
       // If we have retina images, load them in as well
-<span class="fstat-no" title="function not covered">      function generateRetinaSpritesheet (callback) {</span>
-<span class="cstat-no" title="statement not covered">        if (retinaImages) {</span>
-<span class="cstat-no" title="statement not covered">          retinaSpritesmith.createImages(retinaImages, callback);</span>
+<span class="fstat-no" title="function not covered" >      function generateRetinaSpritesheet (callback) {</span>
+<span class="cstat-no" title="statement not covered" >        if (retinaImages) {</span>
+<span class="cstat-no" title="statement not covered" >          retinaSpritesmith.createImages(retinaImages, callback);</span>
         } else {
-<span class="cstat-no" title="statement not covered">          process.nextTick(callback);</span>
+<span class="cstat-no" title="statement not covered" >          process.nextTick(callback);</span>
         }
       }
-    ], <span class="fstat-no" title="function not covered">function handleImages (err, resultArr) {</span>
+    ], <span class="fstat-no" title="function not covered" >function handleImages (err, resultArr) {</span>
       // If an error occurred, emit it
-<span class="cstat-no" title="statement not covered">      if (err) {</span>
-<span class="cstat-no" title="statement not covered">        return cb(err);</span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        return cb(err);</span>
       }
 &nbsp;
       // Otherwise, validate our images line up
-<span class="cstat-no" title="statement not covered">      var normalSprites = resultArr[0];</span>
-<span class="cstat-no" title="statement not covered">      var retinaSprites = resultArr[1];</span>
+<span class="cstat-no" title="statement not covered" >      var normalSprites = resultArr[0];</span>
+<span class="cstat-no" title="statement not covered" >      var retinaSprites = resultArr[1];</span>
 &nbsp;
       // If we have retina images, verify the widths line up
-<span class="cstat-no" title="statement not covered">      if (retinaSprites) {</span>
+<span class="cstat-no" title="statement not covered" >      if (retinaSprites) {</span>
         // Perform our assertions
-<span class="cstat-no" title="statement not covered">        var errorEncountered = false;</span>
-<span class="cstat-no" title="statement not covered">        normalSprites.forEach(<span class="fstat-no" title="function not covered">function validateImageSizes (normalSprite, i) {</span></span>
-<span class="cstat-no" title="statement not covered">          var retinaSprite = retinaSprites[i];</span>
-<span class="cstat-no" title="statement not covered">          if (retinaSprite.width !== normalSprite.width * 2 || retinaSprite.height !== normalSprite.height * 2) {</span>
-<span class="cstat-no" title="statement not covered">            errorEncountered = true;</span>
-<span class="cstat-no" title="statement not covered">            var err = new Error('Normal sprite has inconsistent size with retina sprite. ' +</span>
+<span class="cstat-no" title="statement not covered" >        var errorEncountered = false;</span>
+<span class="cstat-no" title="statement not covered" >        normalSprites.forEach(<span class="fstat-no" title="function not covered" >function validateImageSizes (normalSprite, i) {</span></span>
+<span class="cstat-no" title="statement not covered" >          var retinaSprite = retinaSprites[i];</span>
+<span class="cstat-no" title="statement not covered" >          if (retinaSprite.width !== normalSprite.width * 2 || retinaSprite.height !== normalSprite.height * 2) {</span>
+<span class="cstat-no" title="statement not covered" >            errorEncountered = true;</span>
+<span class="cstat-no" title="statement not covered" >            var err = new Error('Normal sprite has inconsistent size with retina sprite. ' +</span>
               '"' + images[i].path + '" is ' + normalSprite.width + 'x' + normalSprite.height + ' while ' +
               '"' + retinaImages[i].path + '" is ' + retinaSprite.width + 'x' + retinaSprite.height + '.');
-<span class="cstat-no" title="statement not covered">            err.normalSprite = normalSprite;</span>
-<span class="cstat-no" title="statement not covered">            err.retinaSprite = retinaSprite;</span>
-<span class="cstat-no" title="statement not covered">            that.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >            err.normalSprite = normalSprite;</span>
+<span class="cstat-no" title="statement not covered" >            err.retinaSprite = retinaSprite;</span>
+<span class="cstat-no" title="statement not covered" >            that.emit('error', err);</span>
           }
         });
 &nbsp;
         // If there was an error, then bail out
-<span class="cstat-no" title="statement not covered">        if (errorEncountered) {</span>
-<span class="cstat-no" title="statement not covered">          imgStream.push(null);</span>
-<span class="cstat-no" title="statement not covered">          cssStream.push(null);</span>
-<span class="cstat-no" title="statement not covered">          return cb();</span>
+<span class="cstat-no" title="statement not covered" >        if (errorEncountered) {</span>
+<span class="cstat-no" title="statement not covered" >          imgStream.push(null);</span>
+<span class="cstat-no" title="statement not covered" >          cssStream.push(null);</span>
+<span class="cstat-no" title="statement not covered" >          return cb();</span>
         }
       }
 &nbsp;
       // Process our images now
-<span class="cstat-no" title="statement not covered">      var result = spritesmith.processImages(normalSprites, spritesmithParams);</span>
-<span class="cstat-no" title="statement not covered">      var retinaResult;</span>
-<span class="cstat-no" title="statement not covered">      if (retinaSprites) {</span>
-<span class="cstat-no" title="statement not covered">        retinaResult = retinaSpritesmith.processImages(retinaSprites, retinaSpritesmithParams);</span>
+<span class="cstat-no" title="statement not covered" >      var result = spritesmith.processImages(normalSprites, spritesmithParams);</span>
+<span class="cstat-no" title="statement not covered" >      var retinaResult;</span>
+<span class="cstat-no" title="statement not covered" >      if (retinaSprites) {</span>
+<span class="cstat-no" title="statement not covered" >        retinaResult = retinaSpritesmith.processImages(retinaSprites, retinaSpritesmithParams);</span>
       }
 &nbsp;
       // START OF DUPLICATE CODE FROM grunt-spritesmith
       // Generate a listing of CSS variables
-<span class="cstat-no" title="statement not covered">      var coordinates = result.coordinates;</span>
-<span class="cstat-no" title="statement not covered">      var properties = result.properties;</span>
-<span class="cstat-no" title="statement not covered">      var spritePath = params.imgPath || url.relative(cssName, imgName);</span>
-<span class="cstat-no" title="statement not covered">      var spritesheetData = {</span>
+<span class="cstat-no" title="statement not covered" >      var coordinates = result.coordinates;</span>
+<span class="cstat-no" title="statement not covered" >      var properties = result.properties;</span>
+<span class="cstat-no" title="statement not covered" >      var spritePath = params.imgPath || url.relative(cssName, imgName);</span>
+<span class="cstat-no" title="statement not covered" >      var spritesheetData = {</span>
         width: properties.width,
         height: properties.height,
         image: spritePath
       };
-<span class="cstat-no" title="statement not covered">      var cssVarMap = params.cssVarMap || <span class="fstat-no" title="function not covered">function noop () {</span>};</span>
-<span class="cstat-no" title="statement not covered">      var cleanCoords = [];</span>
+<span class="cstat-no" title="statement not covered" >      var cssVarMap = params.cssVarMap || <span class="fstat-no" title="function not covered" >function noop () {</span>};</span>
+<span class="cstat-no" title="statement not covered" >      var cleanCoords = [];</span>
 &nbsp;
       // Clean up the file name of the file
-<span class="cstat-no" title="statement not covered">      Object.getOwnPropertyNames(coordinates).sort().forEach(<span class="fstat-no" title="function not covered">function (file) {</span></span>
+<span class="cstat-no" title="statement not covered" >      Object.getOwnPropertyNames(coordinates).sort().forEach(<span class="fstat-no" title="function not covered" >function (file) {</span></span>
         // Extract out our name
-<span class="cstat-no" title="statement not covered">        var name = getCoordinateName(file);</span>
-<span class="cstat-no" title="statement not covered">        var coords = coordinates[file];</span>
+<span class="cstat-no" title="statement not covered" >        var name = getCoordinateName(file);</span>
+<span class="cstat-no" title="statement not covered" >        var coords = coordinates[file];</span>
 &nbsp;
         // Specify the image for the sprite
-<span class="cstat-no" title="statement not covered">        coords.name = name;</span>
-<span class="cstat-no" title="statement not covered">        coords.source_image = file;</span>
+<span class="cstat-no" title="statement not covered" >        coords.name = name;</span>
+<span class="cstat-no" title="statement not covered" >        coords.source_image = file;</span>
         // DEV: `image`, `total_width`, `total_height` are deprecated as they are overwritten in `spritesheet-templates`
-<span class="cstat-no" title="statement not covered">        coords.image = spritePath;</span>
-<span class="cstat-no" title="statement not covered">        coords.total_width = properties.width;</span>
-<span class="cstat-no" title="statement not covered">        coords.total_height = properties.height;</span>
+<span class="cstat-no" title="statement not covered" >        coords.image = spritePath;</span>
+<span class="cstat-no" title="statement not covered" >        coords.total_width = properties.width;</span>
+<span class="cstat-no" title="statement not covered" >        coords.total_height = properties.height;</span>
 &nbsp;
         // Map the coordinates through cssVarMap
-<span class="cstat-no" title="statement not covered">        coords = cssVarMap(coords) || coords;</span>
+<span class="cstat-no" title="statement not covered" >        coords = cssVarMap(coords) || coords;</span>
 &nbsp;
         // Save the cleaned name and coordinates
-<span class="cstat-no" title="statement not covered">        cleanCoords.push(coords);</span>
+<span class="cstat-no" title="statement not covered" >        cleanCoords.push(coords);</span>
       });
 &nbsp;
       // If we have retina sprites
-<span class="cstat-no" title="statement not covered">      var retinaCleanCoords;</span>
-<span class="cstat-no" title="statement not covered">      var retinaGroups;</span>
-<span class="cstat-no" title="statement not covered">      var retinaSpritesheetInfo;</span>
-<span class="cstat-no" title="statement not covered">      if (retinaResult) {</span>
+<span class="cstat-no" title="statement not covered" >      var retinaCleanCoords;</span>
+<span class="cstat-no" title="statement not covered" >      var retinaGroups;</span>
+<span class="cstat-no" title="statement not covered" >      var retinaSpritesheetInfo;</span>
+<span class="cstat-no" title="statement not covered" >      if (retinaResult) {</span>
         // Generate a listing of CSS variables
-<span class="cstat-no" title="statement not covered">        var retinaCoordinates = retinaResult.coordinates;</span>
-<span class="cstat-no" title="statement not covered">        var retinaProperties = retinaResult.properties;</span>
-<span class="cstat-no" title="statement not covered">        var retinaSpritePath = params.retinaImgPath || url.relative(cssName, retinaImgName);</span>
-<span class="cstat-no" title="statement not covered">        retinaSpritesheetInfo = {</span>
+<span class="cstat-no" title="statement not covered" >        var retinaCoordinates = retinaResult.coordinates;</span>
+<span class="cstat-no" title="statement not covered" >        var retinaProperties = retinaResult.properties;</span>
+<span class="cstat-no" title="statement not covered" >        var retinaSpritePath = params.retinaImgPath || url.relative(cssName, retinaImgName);</span>
+<span class="cstat-no" title="statement not covered" >        retinaSpritesheetInfo = {</span>
           width: retinaProperties.width,
           height: retinaProperties.height,
           image: retinaSpritePath
         };
         // DEV: We reuse cssVarMap
-<span class="cstat-no" title="statement not covered">        retinaCleanCoords = [];</span>
+<span class="cstat-no" title="statement not covered" >        retinaCleanCoords = [];</span>
 &nbsp;
         // Clean up the file name of the file
-<span class="cstat-no" title="statement not covered">        Object.getOwnPropertyNames(retinaCoordinates).sort().forEach(<span class="fstat-no" title="function not covered">function prepareRetinaTemplateData (file) {</span></span>
-<span class="cstat-no" title="statement not covered">          var name = getCoordinateName(file);</span>
-<span class="cstat-no" title="statement not covered">          var coords = retinaCoordinates[file];</span>
-<span class="cstat-no" title="statement not covered">          coords.name = name;</span>
-<span class="cstat-no" title="statement not covered">          coords.source_image = file;</span>
-<span class="cstat-no" title="statement not covered">          coords.image = retinaSpritePath;</span>
-<span class="cstat-no" title="statement not covered">          coords.total_width = retinaProperties.width;</span>
-<span class="cstat-no" title="statement not covered">          coords.total_height = retinaProperties.height;</span>
-<span class="cstat-no" title="statement not covered">          coords = cssVarMap(coords) || coords;</span>
-<span class="cstat-no" title="statement not covered">          retinaCleanCoords.push(coords);</span>
+<span class="cstat-no" title="statement not covered" >        Object.getOwnPropertyNames(retinaCoordinates).sort().forEach(<span class="fstat-no" title="function not covered" >function prepareRetinaTemplateData (file) {</span></span>
+<span class="cstat-no" title="statement not covered" >          var name = getCoordinateName(file);</span>
+<span class="cstat-no" title="statement not covered" >          var coords = retinaCoordinates[file];</span>
+<span class="cstat-no" title="statement not covered" >          coords.name = name;</span>
+<span class="cstat-no" title="statement not covered" >          coords.source_image = file;</span>
+<span class="cstat-no" title="statement not covered" >          coords.image = retinaSpritePath;</span>
+<span class="cstat-no" title="statement not covered" >          coords.total_width = retinaProperties.width;</span>
+<span class="cstat-no" title="statement not covered" >          coords.total_height = retinaProperties.height;</span>
+<span class="cstat-no" title="statement not covered" >          coords = cssVarMap(coords) || coords;</span>
+<span class="cstat-no" title="statement not covered" >          retinaCleanCoords.push(coords);</span>
         });
 &nbsp;
         // Generate groups for our coordinates
-<span class="cstat-no" title="statement not covered">        retinaGroups = cleanCoords.map(<span class="fstat-no" title="function not covered">function getRetinaGroups (normalSprite, i) {</span></span>
+<span class="cstat-no" title="statement not covered" >        retinaGroups = cleanCoords.map(<span class="fstat-no" title="function not covered" >function getRetinaGroups (normalSprite, i) {</span></span>
           // Generate our group
           // DEV: Name is inherited from `cssVarMap` on normal sprite
-<span class="cstat-no" title="statement not covered">          return {</span>
+<span class="cstat-no" title="statement not covered" >          return {</span>
             name: normalSprite.name,
             index: i
           };
@@ -1348,37 +1350,37 @@ cssFormats.add('.css', 'css');
       }
 &nbsp;
       // If we have handlebars helpers, register them
-<span class="cstat-no" title="statement not covered">      var handlebarsHelpers = params.cssHandlebarsHelpers;</span>
-<span class="cstat-no" title="statement not covered">      if (handlebarsHelpers) {</span>
-<span class="cstat-no" title="statement not covered">        Object.keys(handlebarsHelpers).forEach(<span class="fstat-no" title="function not covered">function registerHelper (helperKey) {</span></span>
-<span class="cstat-no" title="statement not covered">          templater.registerHandlebarsHelper(helperKey, handlebarsHelpers[helperKey]);</span>
+<span class="cstat-no" title="statement not covered" >      var handlebarsHelpers = params.cssHandlebarsHelpers;</span>
+<span class="cstat-no" title="statement not covered" >      if (handlebarsHelpers) {</span>
+<span class="cstat-no" title="statement not covered" >        Object.keys(handlebarsHelpers).forEach(<span class="fstat-no" title="function not covered" >function registerHelper (helperKey) {</span></span>
+<span class="cstat-no" title="statement not covered" >          templater.registerHandlebarsHelper(helperKey, handlebarsHelpers[helperKey]);</span>
         });
       }
 &nbsp;
       // If there is a custom template, use it
-<span class="cstat-no" title="statement not covered">      var cssFormat = 'spritesmith-custom';</span>
-<span class="cstat-no" title="statement not covered">      var cssTemplate = params.cssTemplate;</span>
-<span class="cstat-no" title="statement not covered">      if (cssTemplate) {</span>
-<span class="cstat-no" title="statement not covered">        if (typeof cssTemplate === 'function') {</span>
-<span class="cstat-no" title="statement not covered">          templater.addTemplate(cssFormat, cssTemplate);</span>
+<span class="cstat-no" title="statement not covered" >      var cssFormat = 'spritesmith-custom';</span>
+<span class="cstat-no" title="statement not covered" >      var cssTemplate = params.cssTemplate;</span>
+<span class="cstat-no" title="statement not covered" >      if (cssTemplate) {</span>
+<span class="cstat-no" title="statement not covered" >        if (typeof cssTemplate === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >          templater.addTemplate(cssFormat, cssTemplate);</span>
         } else {
-<span class="cstat-no" title="statement not covered">          templater.addHandlebarsTemplate(cssFormat, fs.readFileSync(cssTemplate, 'utf8'));</span>
+<span class="cstat-no" title="statement not covered" >          templater.addHandlebarsTemplate(cssFormat, fs.readFileSync(cssTemplate, 'utf8'));</span>
         }
       // Otherwise, override the cssFormat and fallback to 'json'
       } else {
-<span class="cstat-no" title="statement not covered">        cssFormat = params.cssFormat;</span>
-<span class="cstat-no" title="statement not covered">        if (!cssFormat) {</span>
-<span class="cstat-no" title="statement not covered">          cssFormat = cssFormats.get(cssName) || 'json';</span>
+<span class="cstat-no" title="statement not covered" >        cssFormat = params.cssFormat;</span>
+<span class="cstat-no" title="statement not covered" >        if (!cssFormat) {</span>
+<span class="cstat-no" title="statement not covered" >          cssFormat = cssFormats.get(cssName) || 'json';</span>
 &nbsp;
           // If we are dealing with retina items, move to retina flavor (e.g. `scss` -&gt; `scss_retina`)
-<span class="cstat-no" title="statement not covered">          if (retinaGroups) {</span>
-<span class="cstat-no" title="statement not covered">            cssFormat += '_retina';</span>
+<span class="cstat-no" title="statement not covered" >          if (retinaGroups) {</span>
+<span class="cstat-no" title="statement not covered" >            cssFormat += '_retina';</span>
           }
         }
       }
 &nbsp;
       // Render the variables via `spritesheet-templates`
-<span class="cstat-no" title="statement not covered">      var cssStr = templater({</span>
+<span class="cstat-no" title="statement not covered" >      var cssStr = templater({</span>
         sprites: cleanCoords,
         spritesheet: spritesheetData,
         spritesheet_info: {
@@ -1403,39 +1405,39 @@ cssFormats.add('.css', 'css');
       // TODO: Consider making joint stream default
       //   but allow for split stream which has more distinct errors
       //   e.g. spritesmith.split() = {css, img}
-<span class="cstat-no" title="statement not covered">      result.image.on('error', <span class="fstat-no" title="function not covered">function forwardImgError (err) {</span></span>
-<span class="cstat-no" title="statement not covered">        that.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >      result.image.on('error', <span class="fstat-no" title="function not covered" >function forwardImgError (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >        that.emit('error', err);</span>
       });
-<span class="cstat-no" title="statement not covered">      var imgFile = new gutil.File({</span>
+<span class="cstat-no" title="statement not covered" >      var imgFile = new gutil.File({</span>
         path: imgName,
         contents: result.image
       });
-<span class="cstat-no" title="statement not covered">      that.push(imgFile);</span>
-<span class="cstat-no" title="statement not covered">      imgStream.push(imgFile);</span>
-<span class="cstat-no" title="statement not covered">      if (retinaResult) {</span>
-<span class="cstat-no" title="statement not covered">        var retinaImgFile = new gutil.File({</span>
+<span class="cstat-no" title="statement not covered" >      that.push(imgFile);</span>
+<span class="cstat-no" title="statement not covered" >      imgStream.push(imgFile);</span>
+<span class="cstat-no" title="statement not covered" >      if (retinaResult) {</span>
+<span class="cstat-no" title="statement not covered" >        var retinaImgFile = new gutil.File({</span>
           path: retinaImgName,
           contents: retinaResult.image
         });
-<span class="cstat-no" title="statement not covered">        retinaResult.image.on('error', <span class="fstat-no" title="function not covered">function forwardImgError (err) {</span></span>
-<span class="cstat-no" title="statement not covered">          that.emit('error', err);</span>
+<span class="cstat-no" title="statement not covered" >        retinaResult.image.on('error', <span class="fstat-no" title="function not covered" >function forwardImgError (err) {</span></span>
+<span class="cstat-no" title="statement not covered" >          that.emit('error', err);</span>
         });
-<span class="cstat-no" title="statement not covered">        that.push(retinaImgFile);</span>
-<span class="cstat-no" title="statement not covered">        imgStream.push(retinaImgFile);</span>
+<span class="cstat-no" title="statement not covered" >        that.push(retinaImgFile);</span>
+<span class="cstat-no" title="statement not covered" >        imgStream.push(retinaImgFile);</span>
       }
 &nbsp;
       // Close our image stream
-<span class="cstat-no" title="statement not covered">      imgStream.push(null);</span>
+<span class="cstat-no" title="statement not covered" >      imgStream.push(null);</span>
 &nbsp;
       // Output the CSS
-<span class="cstat-no" title="statement not covered">      var cssFile = new gutil.File({</span>
+<span class="cstat-no" title="statement not covered" >      var cssFile = new gutil.File({</span>
         path: cssName,
         contents: new Buffer(cssStr)
       });
-<span class="cstat-no" title="statement not covered">      that.push(cssFile);</span>
-<span class="cstat-no" title="statement not covered">      cssStream.push(cssFile);</span>
-<span class="cstat-no" title="statement not covered">      cssStream.push(null);</span>
-<span class="cstat-no" title="statement not covered">      cb();</span>
+<span class="cstat-no" title="statement not covered" >      that.push(cssFile);</span>
+<span class="cstat-no" title="statement not covered" >      cssStream.push(cssFile);</span>
+<span class="cstat-no" title="statement not covered" >      cssStream.push(null);</span>
+<span class="cstat-no" title="statement not covered" >      cb();</span>
     });
   };
 &nbsp;
@@ -1443,20 +1445,19 @@ cssFormats.add('.css', 'css');
   // - master stream includes all files
   // - 'css' stream for css only
   // - 'img' stream for images only
-<span class="cstat-no" title="statement not covered">  var retStream = through2.obj(onData, onEnd);</span>
-<span class="cstat-no" title="statement not covered">  retStream.css = cssStream;</span>
-<span class="cstat-no" title="statement not covered">  retStream.img = imgStream;</span>
-<span class="cstat-no" title="statement not covered">  return retStream;</span>
+<span class="cstat-no" title="statement not covered" >  var retStream = through2.obj(onData, onEnd);</span>
+<span class="cstat-no" title="statement not covered" >  retStream.css = cssStream;</span>
+<span class="cstat-no" title="statement not covered" >  retStream.img = imgStream;</span>
+<span class="cstat-no" title="statement not covered" >  return retStream;</span>
 }
 &nbsp;
 module.exports = gulpSpritesmith;
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 11:36:10 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 15:54:30 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
