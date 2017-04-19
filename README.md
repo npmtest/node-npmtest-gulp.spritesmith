@@ -1,4 +1,7 @@
-# test coverage for  [gulp.spritesmith (v6.4.0)](https://github.com/twolfson/gulp.spritesmith)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp.spritesmith.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp.spritesmith) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp.spritesmith.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp.spritesmith)
+# npmtest-gulp.spritesmith
+
+#### basic test coverage for  [gulp.spritesmith (v6.4.0)](https://github.com/twolfson/gulp.spritesmith)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp.spritesmith.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp.spritesmith) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp.spritesmith.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp.spritesmith)
+
 #### Convert a set of images into a spritesheet and CSS variables via gulp
 
 [![NPM](https://nodei.co/npm/gulp.spritesmith.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp.spritesmith)
